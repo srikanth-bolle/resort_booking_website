@@ -12,7 +12,7 @@ const HomePage = async () => {
 
  
   const session = await auth();
-
+console.log('sess',session)
   
   if (!session) {
     redirect('/login');
@@ -25,18 +25,19 @@ const HomePage = async () => {
     <div>
       <UserNavigation />
       <h1>Welcome, {session.user?.name}</h1>
+      
     </div>
     // <div>
-    //   {session.role === 'user' &&  (
+    //   {session.user?.name === 'user' &&  (
     //     <>
-    //     <UserNavigation userName = {userName}/>
+    //     <UserNavigation />
     //     <img src='banner.jpg' alt='banner' className='bannerImage'/>
        
     //     </>
     //   ) }
-    //   {session.role === 'admin' &&
-    //     <AdminPage /> 
-    // }
+      /* {session === 'admin' &&
+        <AdminPage /> 
+    } */
     // </div>
   );
 };

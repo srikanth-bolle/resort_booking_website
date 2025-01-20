@@ -67,6 +67,7 @@ const UserLoginPage = () => {
             value={userRegister.emailId}
             onChange={(e) => handleChange(e, "emailId")}
             aria-label="Email Id"
+            autoComplete="email"
           />
         </div>
 
@@ -82,6 +83,7 @@ const UserLoginPage = () => {
             value={userRegister.password}
             onChange={(e) => handleChange(e, "password")}
             aria-label="Password"
+            autoComplete="current-password"
           />
         </div>
 
